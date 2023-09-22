@@ -1,26 +1,52 @@
-import React from 'react';
-import logo from './logo.svg';
+
 import './App.css';
+import Greet from './components/Greet';
+import Heading from './components/Heading';
+import Oscar from './components/Oscar';
+import Person from './components/Person';
+import PersonList from './components/PersonList';
+import Status from './components/Status';
+
 
 function App() {
+
+  const namePerson = {
+    first: "John",
+    last: "Doe"
+  }
+
+  const personList = [
+   {
+      first: 'Bruce',
+      last : 'Lee'
+     },
+     {
+      first: 'Alhpa',
+      last : 'John'
+     },
+     {
+      first: 'Aima',
+      last : 'lover'
+     }
+
+    ]
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        {/* <Greet name="Users" messageCount={10} isLogged={true} />
+        <Person name={namePerson} />
+        <PersonList names={personList} /> */}
+        <Status status={'loading'}/>
+        <Heading > Placeholder text</Heading>
+       <Oscar> <Heading>  Oscar goes to Disney Palace </Heading> </Oscar>
     </div>
   );
 }
 
 export default App;
+
+
+
+
+
+// there are two things to use types or interfaces, but one article suggest me to use type while building the application and interface when building libraries, I used that pattern
